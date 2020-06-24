@@ -14,7 +14,8 @@ class MyTestCase(unittest.TestCase):
         self.assertTrue(sm.in_set("c"), True)
     def test_in_set_false(self):
         self.assertFalse(sm.in_set("o"), False)
-
+    def test_in_set(self):
+        self.assertTrue(sm.in_set("e"), True)
 
 if __name__ == '__main__':
     unittest.main()
