@@ -12,9 +12,9 @@ def in_set(type):
 
     """
     Use reST style
-    :param a_set:
+    : param x: set we are checking
     : param y: for the user to guess if it is in the set
-    : return: return a boolean value stating if the element is in the set
+    : return: return a boolean value stating if y, the element is in the set, x
     : raises keyError: raises an exception
     """
     try:
@@ -30,7 +30,7 @@ def in_set(type):
         raise ValueError
 
 if __name__ == '__main__':
-    guess_set = input("guess set: ")
+    type = input("guess set: ")
     set_input = in_set(type)
 
 
