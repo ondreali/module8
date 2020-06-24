@@ -3,17 +3,18 @@ program: Dictionary_Update_assignment.py
 Author: Ondrea Li
 Last date modfied: 06/24/20
 
-The purpose of this program is to w
+The purpose of this program is to write a function that ask for the number of test and test scores
+to put it in a dictionary
+and find the average score of the test scores
 """
 score_dict = dict()
 list = []
 def get_test_scores():
     """
     Use reST style
-    :param test_name: this represents the user's test name
-    :param test_score: this represents test score
-    :param invalid_message: this represents message if input invalid
-    :return: test_name: test_score
+    :param num_score: this represents the number of test scores
+    :param score: this represents test score for each num_score
+    :return score_dict
     :raises keyError: raises an exception
     """
     while True:
@@ -28,11 +29,8 @@ def get_test_scores():
 def average_score(score_dict):
     """
     Use reST style
-    :param test_name: this represents the user's test name
-    :param test_score: this represents test score
-    :param invalid_message: this represents message if input invalid
-    :return: average
-    :raises keyError: raises an exception
+    :param list: this represents input for score
+    :return: average score
     """
     num_score = len(list)
     score_total = 0
@@ -44,7 +42,6 @@ def average_score(score_dict):
 if __name__ == '__main__':
     try:
         num_score = int(input("Enter the number of test scores: "))
-        invalid_message = "Invalid score, try again"
         for n in range(0, num_score):
             score = int(input("Enter the test score: "))
             if 0 <= score and score <= 100:
@@ -59,3 +56,4 @@ if __name__ == '__main__':
         get_test_scores()
         print(score_dict)
         print("The average is",average_score(list))
+
