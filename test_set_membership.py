@@ -12,6 +12,8 @@ from more_fun_with_collections import set_membership as sm
 class MyTestCase(unittest.TestCase):
     def test_in_set_true(self):
         self.assertTrue(sm.in_set("c"), True)
+    def test_in_set_false(self):
+        self.assertTrue(sm.in_set("o"), False)
 
 
 if __name__ == '__main__':
